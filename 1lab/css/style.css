@@ -58,6 +58,10 @@ h1 {
   height: 100%;
 }
 
+.navigation a li:hover{
+  transform: scale(1.2);
+}
+
 .navigation a {
   height: 100%;
   display: table;
@@ -78,7 +82,6 @@ h1 {
   margin: 20px;
   overflow: hidden;
 }
-
 
 .about_city_text {
   text-align: center;
@@ -141,6 +144,10 @@ h1 {
 .container{
   text-align: center;
   margin: 20px;
+}
+
+.gallery_itm img:hover{
+  transform: scale(1.1);
 }
 
 .gallery_itm {
