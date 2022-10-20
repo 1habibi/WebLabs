@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/lato-font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Product</title>
+</head>
+
+<body>
+  <header>
+    <div class="container pt-2">
+      <div class="row p-2">
+
+        <div class="col-lg-12 col-xl-2 logo-container">
+          <a href="index.html"><img src="img/logo.png" alt="noreferrer noopener"></a>
+        </div>
+
+        <div class="col-lg-12 col-xl-5 d-flex align-items-center">
+          <div class="input-group">
+            <button type="button" class="cs-header-button btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Browse
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <p class="cs-browse-dropdown-heading px-3 mb-1">Women</p>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Dresses</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Tops</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Sweater/Knits</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Jackets/Coats</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Blazers</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Denim</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Leggings/Pants</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Skirts/Shorts</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Accessories</a></li>
+              <li>
+                <p class="cs-browse-dropdown-heading px-3 mb-1 mt-3">Men</p>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Tees/Tank tops</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Shirts/Polos</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Sweaters</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Sweatshirts/Hoodies</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Blazers</a></li>
+              <li><a class="cs-browse-dropdown-item dropdown-item" href="#">Jackets/Vests</a></li>
+            </ul>
+            <input type="text" class="cs-header-search-input form-control" placeholder="Search for Item..."
+              aria-label="text input">
+            <button type="button" class="cs-header-search-button btn btn-outline-secondary"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+
+        <div class="cs-my-account col-lg-12 col-xl-3 offset-2 d-flex align-items-center justify-content-center">
+          <a href="shopping-cart.html" class="text-dark my-cart"><i class="cs-cart fa-solid fa-cart-shopping"></i></a>
+          <div class="dropdown">
+            <button class="cs-header-myacc-button btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              My account
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg cs-main-nav">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav d-flex align-items-center w-100 justify-content-center cs-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Man</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Woman</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accsoseries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Futured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hot deals</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section new-arrivals-section">
+    <div class="container">
+      <div class="row new-arrivals-section align-items-center">
+        <div class="col-2">
+          <h1 class="new-arrivals-section-heading">New arrivals</h1>
+        </div>
+        <div class="col-10 d-flex justify-content-end align-items-center">
+          <div class="new-arrivals-section-path">
+            <h5>Home / Men / <span>new arrivals</span></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section main-section mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="cs-main-section-accordion accordion accordion-flush" id="accordion1"> 
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="ac1-heading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ac1-flush-collapse1" aria-expanded="false" aria-controls="ac1-flush-collapse1">
+                  Category
+                </button>
+              </h2>
+              <div id="ac1-flush-collapse1" class="accordion-collapse collapse show" aria-labelledby="ac1-heading1" data-bs-parent="#accordion1">
+                <div class="accordion-body">
+                  <ul>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Bags</a></li>
+                    <li><a href="">Denim</a></li>
+                    <li><a href="">Hoodies & Sweatshirts</a></li>
+                    <li><a href="">Jackets & Coats</a></li>
+                    <li><a href="">Pants</a></li>
+                    <li><a href="">Polos</a></li>
+                    <li><a href="">Shirts</a></li>
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Shorts</a></li>
+                    <li><a href="">Sweaters & Knits</a></li>
+                    <li><a href="">T-Shirts</a></li>
+                    <li><a href="">Tanks</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="ac1-heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ac1-flush-collapse2" aria-expanded="false" aria-controls="ac1-flush-collapse2">
+                  Brand
+                </button>
+              </h2>
+              <div id="ac1-flush-collapse2" class="accordion-collapse collapse" aria-labelledby="ac1-heading2" data-bs-parent="#accordion1">
+                <div class="accordion-body">some content</div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="ac1-heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ac1-flush-collapse3" aria-expanded="false" aria-controls="ac1-flush-collapse3">
+                  Designer
+                </button>
+              </h2>
+              <div id="ac1-flush-collapse3" class="accordion-collapse collapse" aria-labelledby="ac1-heading3" data-bs-parent="#accordion1">
+                <div class="accordion-body">some content</div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-4">
+              <h5 class="cs-main-section-filter-heading">Trending now</h5>
+              <div class="cs-filter-tranding-now">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check1">
+                  <label class="form-check-label" for="flex-tranding-now-check1">
+                    Bohemian
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check2">
+                  <label class="form-check-label" for="flex-tranding-now-check2">
+                    Floral
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check3">
+                  <label class="form-check-label" for="flex-tranding-now-check3">
+                    Lace
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check4">
+                  <label class="form-check-label" for="flex-tranding-now-check4">
+                    Floral
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check5">
+                  <label class="form-check-label" for="flex-tranding-now-check5">
+                    Lace
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-tranding-now-check6">
+                  <label class="form-check-label" for="flex-tranding-now-check6">
+                    Bohemian
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <h5 class="cs-main-section-filter-heading">Size</h5>
+              <div class="cs-filter-size">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check1">
+                  <label class="form-check-label" for="flex-size-check1">
+                    XXS
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check2">
+                  <label class="form-check-label" for="flex-size-check2">
+                    XS
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check3">
+                  <label class="form-check-label" for="flex-size-check3">
+                    S
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check4">
+                  <label class="form-check-label" for="flex-size-check4">
+                    M
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check5">
+                  <label class="form-check-label" for="flex-size-check5">
+                    L
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check6">
+                  <label class="form-check-label" for="flex-size-check6">
+                    XL
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flex-size-check7">
+                  <label class="form-check-label" for="flex-size-check7">
+                    XXL
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <h5 class="cs-main-section-filter-heading">Price</h5>
+              <div class="cs-price-range-slider">
+                <div class="price-input">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" class="input-min" value="2500" disabled>
+                  </div>
+                  <div class="separator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" class="input-max" value="7500" disabled>
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="progress">
+                  </div>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="range-min" min="0" max="10000" value="2500">
+                  <input type="range" class="range-max" min="0" max="10000" value="7500">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sort-by mt-5">
+            <div class="col-12 d-flex align-items-center">
+              <div class="btn-group cs-main-section-sortby-btn-group">
+                <button type="button" class="btn cs-main-section-sortby-label">Sort By</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split cs-main-section-sortby-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Переключатель выпадающего списка</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Name</a></li>
+                  <li><a class="dropdown-item" href="#">Date</a></li>
+                  <li><a class="dropdown-item" href="#">...</a></li>
+                  <li><a class="dropdown-item" href="#">...</a></li>
+                </ul>
+              </div>
+              <div class="btn-group cs-main-section-sortby-btn-group">
+                <button type="button" class="btn cs-main-section-sortby-label">Show</button>
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split cs-main-section-sortby-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Переключатель выпадающего списка</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">09</a></li>
+                  <li><a class="dropdown-item" href="#">12</a></li>
+                  <li><a class="dropdown-item" href="#">16</a></li>
+                  <li><a class="dropdown-item" href="#">18</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-1.png" alt="">
+              <a href="single-page.html"><p>Mango people T-Shirt</p></a>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-2.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-3.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-4.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-5.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-6.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-7.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-8.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+            <div class="col-4 main-section-product-item">
+              <img src="img/product/sort-by-section-9.png" alt="">
+              <p>Mango people T-Shirt</p>
+              <p class="price-label">$52.00</p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4">
+              <nav aria-label="Page navigation example">
+                <ul class="cs-pagination pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link page-link-active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">20</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-3 offset-5 d-flex justify-content-end">
+              <button type="button" class="cs-view-all-btn btn btn-danger cs-main-section-sortby-label">View All</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section special-offer-section-mod mt-5 d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-4">
+          <img src="/img/icons/icon-truck.png" alt="">
+          <h6 class="fw-bold bs-white">Free delivery</h6>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+        <div class="col-4">
+          <img src="/img/icons/icon-discount.png" alt="">
+          <h6 class="fw-bold">Sales & discounts</h6>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+        <div class="col-4">
+          <img src="/img/icons/icon-crown.png" alt="">
+          <h6 class="fw-bold">Quality assurance</h6>
+          <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section feedback-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner">
+              
+              <div class="carousel-item active">
+                <div class="review-item">
+                  <div class="row">
+                    <div class="col-lg-3 col-xl-2">
+                      <img src="img/section-5-avatar.png" class="d-block cs-feedback-avatar" alt="">
+                    </div>
+                    <div class="col-6">
+                      <div class="feedback-text">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                      </div>
+                      <div class="feedback-author">
+                        <h5>Bin Burhan</h5>
+                        <h6>Dhaka, Bd</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+
+              <div class="carousel-item">
+                <div class="review-item">
+                  <div class="row">
+                    <div class="col-lg-3 col-xl-2">
+                      <img src="img/section-5-avatar.png" class="d-block cs-feedback-avatar" alt="">
+                    </div>
+                    <div class="col-6">
+                      <div class="feedback-text">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                      </div>
+                      <div class="feedback-author">
+                        <h5>Bin Burhan</h5>
+                        <h6>Dhaka, Bd</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+
+              <div class="carousel-item">
+                <div class="review-item">
+                  <div class="row">
+                    <div class="col-lg-3 col-xl-2">
+                      <img src="img/section-5-avatar.png" class="d-block cs-feedback-avatar" alt="">
+                    </div>
+                    <div class="col-6">
+                      <div class="feedback-text">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                      </div>
+                      <div class="feedback-author">
+                        <h5>Bin Burhan</h5>
+                        <h6>Dhaka, Bd</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>           
+              </div>       
+            </div>
+            <div class="cs-feedback-section-carousel-indicators carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-6 d-flex justify-content-center flex-wrap flex-column mt-10">
+          <h3 class="text-center text-uppercase fw-bold">Subscribe</h3>
+          <h5 class=" text-center text-uppercase fw-bold">for our new letter and promotion</h5>
+          <div class="row d-flex justify-content-center">
+            <div class="col-9">
+              <div class="input-group mt-4">
+                <input type="text" class="cs-feedback-section-input-group-text form-control" placeholder="Enter your e-mail" aria-label="Enter your e-mail" aria-describedby="button-addon2">
+                <button class="cs-feedback-section-input-group-button btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-section mt-10 mb-8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-5">
+          <div class="logo-container mb-3">
+            <a href="index.html"><img src="img/logo.png" alt="noreferrer noopener"></a>
+          </div>
+          <div class="menu-section-logo-text">
+            <p>
+              Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. 
+            </p>
+            <p>
+              Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2 menu-section-col">
+          <div class="menu-section-col-heading">
+            <h5>Company</h5>
+          </div>
+          <ul class="menu-section-col-list">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>How It Works</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2 menu-section-col">
+          <div class="menu-section-col-heading">
+            <h5>Information</h5>
+          </div>
+          <ul class="menu-section-col-list">
+            <li>Terms & Condition</li>
+            <li>Privacy Policy</li>
+            <li>How to Buy</li>
+            <li>How to Sell</li>
+            <li>Promotion</li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-2 menu-section-col">
+          <div class="menu-section-col-heading">
+            <h5>Shop category</h5>
+          </div>
+          <ul class="menu-section-col-list">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Child</li>
+            <li>Apparel</li>
+            <li>Browse All</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="cs-footer-container container d-flex align-items-center">
+      <div class="cs-footer-copyriting col-lg-12 col-xl-3">
+        <p>© 2017 Brand All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-12 col-xl-9">
+        <ul class="cs-footer-icons-list d-flex align-items-end justify-content-end">
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-linkedin-in"></i></li>
+          <li><i class="fa-brands fa-pinterest-p"></i></li>
+          <li><i class="fa-brands fa-google-plus-g"></i></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/priceslider.js"></script>
+</body>
+
+</html>
