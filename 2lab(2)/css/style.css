@@ -391,7 +391,7 @@ a{
 .feedback-section{
     min-height: 440px;
     background-color: #e8e8e8;
-    background-image: url(/img/section-5-bg.png);
+    background-image: url(../img/section-5-bg.png);
     background-size: cover;
     background-position: center bottom;
 }
