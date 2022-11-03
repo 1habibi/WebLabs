@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pets First - Service Page">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0134d4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title>Service</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/favicon.png">
+  <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/tiny-slider.css">
+  <link rel="stylesheet" href="css/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="css/vanilla-dataTables.min.css">
+  <link rel="stylesheet" href="css/apexcharts.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+  </div>
+  <!-- Internet Connection Status -->
+  <!-- # This code for showing internet connection status -->
+  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- Dark mode switching -->
+  <div class="dark-mode-switching">
+    <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+      <div class="dark-mode-text text-center">
+        <svg class="bi bi-moon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"></path>
+        </svg>
+        <p class="mb-0">Switching to dark mode</p>
+      </div>
+      <div class="light-mode-text text-center">
+        <svg class="bi bi-brightness-high" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+          </path>
+        </svg>
+        <p class="mb-0">Switching to light mode</p>
+      </div>
+    </div>
+  </div>
+  <!-- Header Area -->
+  <div class="header-area" id="headerArea">
+    <div class="container">
+      <!-- # Paste your Header Content from here -->
+      <!-- # Header Five Layout -->
+      <!-- # Copy the code from here ... -->
+      <!-- Header Content -->
+      <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
+        <!-- Navbar Toggler -->
+        <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas"><span class="d-block"></span><span class="d-block"></span><span class="d-block"></span></div>
+        <!-- Page Title-->
+        <div class="page-heading">
+          <h6 class="mb-0">Service</h6>
+        </div>
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper"><a href="index.html"><img src="img/core-img/logo.png" alt=""></a></div>
+      </div>
+      <!-- # Header Five Layout End -->
+    </div>
+  </div>
+  <!-- # Sidenav Left -->
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1"
+    aria-labelledby="affanOffcanvsLabel">
+    <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+    <div class="offcanvas-body p-0">
+      <!-- Side Nav Wrapper -->
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Profile -->
+        <div class="sidenav-profile bg-gradient">
+          <div class="sidenav-style1"></div>
+          <!-- User Thumbnail -->
+          <div class="user-profile"><img src="img/bg-img/profile.png" alt=""></div>
+          <!-- User Info -->
+          <div class="user-info">
+            <h6 class="user-name mb-0">Your Profile</h6><span>_user-name_</span>
+          </div>
+        </div>
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+          <li><a href="index.html"><i class="bi bi-house"></i>Home</a></li>
+          <li><a href="service.html"><i class="bi bi-bandaid"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-capsule-pill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.02 5.364a3 3 0 0 0-4.242-4.243L1.121 6.778a3 3 0 1 0 4.243 4.243l5.657-5.657Zm-6.413-.657 2.878-2.879a2 2 0 1 1 2.829 2.829L7.435 7.536 4.607 4.707ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm-.5 1.041a3 3 0 0 0 0 5.918V9.04Zm1 5.918a3 3 0 0 0 0-5.918v5.918Z" />
+                </svg></i>Service</a></li>
+          <li><a href="shop.html"><i class="bi bi-bag"></i>Shop</a></li>
+          <li><a href="about.html"><i class="bi bi-hospital"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-hospital" viewBox="0 0 16 16">
+                  <path
+                    d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5Zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9h-.5Zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Z" />
+                  <path
+                    d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1V1Zm2 14h2v-3H7v3Zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm0-14H6v1h4V1Zm2 7v7h3V8h-3Zm-8 7V8H1v7h3Z" />
+                </svg></i>About us</a></li>
+          <li><a href="contacts.html"><i class="bi bi-person"></i>Contacts</a></li>
+          <li>
+            <div class="night-mode-nav"><i class="bi bi-moon"></i>Night Mode
+              <div class="form-check form-switch">
+                <input class="form-check-input form-check-success" id="darkSwitch" type="checkbox">
+              </div>
+            </div>
+          </li>
+          <li><a href="#"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+        </ul>
+        <!-- Social Info -->
+        <div class="social-info-wrap"><a href="#"><i class="bi bi-telegram"></i></a><a href="#"><i
+              class="bi bi-github"></i></a><a href="#"><i class="bi bi-instagram"></i></a></div>
+        <!-- Copyright Info -->
+        <div class="copyright-info">
+          <p>2022 &copy; Made by<a href="https://t.me/bogdanchik1313">Bogdan Migunov</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Service -->
+  <div class="page-content-wrapper py-3">
+    <!-- Top Products-->
+    <div class="top-products-area product-list-wrap">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/paw-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Surgery</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/eye-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Ophthalmology</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/teeth-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Dentistry</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/heart-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Cardiology</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/test-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Tests</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-12">
+            <div class="card single-product-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <div class="card-side-img">
+                    <!-- Product Thumbnail--><a class="cs-product-thumbnail product-thumbnail d-block" href="page-shop-details.html"><img src="img/icons/euthanasia-icon.svg" alt=""></a>
+                  </div>
+                  <div class="card-content px-4 py-2">
+                    <!-- Product Title--><a class="product-title d-block text-truncate mt-0" href="page-shop-details.html">Euthanasia</a>
+                    <!-- Add To Cart Button--><a class="btn btn-outline-info btn-sm" href="#">
+                      <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                      </svg>Make an appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Content -->
+  <div class="footer-nav position-relative shadow-sm footer-style-two" style="position: fixed !important; bottom: 0; left: 0; right: 0; z-index: 1000">
+    <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+      <li><a href="index.html">
+        <svg class="bi bi-house" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+          <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
+        </svg></a></li>
+      <li class="active"><a href="service.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-capsule-pill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.02 5.364a3 3 0 0 0-4.242-4.243L1.121 6.778a3 3 0 1 0 4.243 4.243l5.657-5.657Zm-6.413-.657 2.878-2.879a2 2 0 1 1 2.829 2.829L7.435 7.536 4.607 4.707ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm-.5 1.041a3 3 0 0 0 0 5.918V9.04Zm1 5.918a3 3 0 0 0 0-5.918v5.918Z"/>
+        </svg></a></li>
+      <li><a href="shop.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+        </svg></a></li>
+      <li><a href="cart.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg></a></li>
+    </ul>
+    <!-- # Footer Two Layout End -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- All JavaScript Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slideToggle.min.js"></script>
+  <script src="js/internet-status.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/vanilla-dataTables.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/magic-grid.min.js"></script>
+  <script src="js/dark-rtl.js"></script>
+  <script src="js/active.js"></script>
+  <!-- PWA -->
+  <script src="pwa.js"></script>
+</body>
+
+</html>

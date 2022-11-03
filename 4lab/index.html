@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pets First - Modern Vet Clinic">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0134d4">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title>Pets First - Modern Vet Clinic</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/favicon.png">
+  <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/tiny-slider.css">
+  <link rel="stylesheet" href="css/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="css/vanilla-dataTables.min.css">
+  <link rel="stylesheet" href="css/apexcharts.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+  </div>
+  <!-- Internet Connection Status -->
+  <!-- # This code for showing internet connection status -->
+  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- Dark mode switching -->
+  <div class="dark-mode-switching">
+    <div class="d-flex w-100 h-100 align-items-center justify-content-center">
+      <div class="dark-mode-text text-center">
+        <svg class="bi bi-moon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"></path>
+        </svg>
+        <p class="mb-0">Switching to dark mode</p>
+      </div>
+      <div class="light-mode-text text-center">
+        <svg class="bi bi-brightness-high" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+        </svg>
+        <p class="mb-0">Switching to light mode</p>
+      </div>
+    </div>
+  </div>
+  <!-- Download App -->
+  <div class="toast toast-autohide custom-toast-1 toast-primary home-page-toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000" data-bs-autohide="true">
+    <div class="toast-body">
+      <svg class="bi bi-bookmark-check text-white" width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
+        <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+      </svg>
+      <div class="toast-text ms-3 me-2">
+        <p class="mb-1 text-white">Welkome, User!</p><small class="d-block">Click the "Add to Home Screen" button &amp; enjoy it like an app.</small>
+      </div>
+    </div>
+    <button class="btn btn-close btn-close-white position-absolute p-1" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
+    <span class="toast-autohide-animation" style="animation-duration: 7000ms;"></span>
+  </div>
+  <!-- Header Area -->
+  <div class="header-area" id="headerArea">
+    <div class="container">
+      <!-- # Paste your Header Content from here -->
+      <!-- # Header Five Layout -->
+      <!-- # Copy the code from here ... -->
+      <!-- Header Content -->
+      <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
+        <!-- Navbar Toggler -->
+        <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas"><span class="d-block"></span><span class="d-block"></span><span class="d-block"></span></div>
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper"><a href="index.html"><img src="img/core-img/logo.png" alt=""></a></div>
+      </div>
+      <!-- # Header Five Layout End -->
+    </div>
+  </div>
+  <!-- # Sidenav Left -->
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1" aria-labelledby="affanOffcanvsLabel">
+    <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-body p-0">
+      <!-- Side Nav Wrapper -->
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Profile -->
+        <div class="sidenav-profile bg-gradient">
+          <div class="sidenav-style1"></div>
+          <!-- User Thumbnail -->
+          <div class="user-profile"><img src="img/bg-img/profile.png" alt=""></div>
+          <!-- User Info -->
+          <div class="user-info">
+            <h6 class="user-name mb-0">Your Profile</h6><span>_user-name_</span>
+          </div>
+        </div>
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+          <li><a href="index.html"><i class="bi bi-house"></i>Home</a></li>
+          <li><a href="service.html"><i class="bi bi-bandaid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule-pill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.02 5.364a3 3 0 0 0-4.242-4.243L1.121 6.778a3 3 0 1 0 4.243 4.243l5.657-5.657Zm-6.413-.657 2.878-2.879a2 2 0 1 1 2.829 2.829L7.435 7.536 4.607 4.707ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm-.5 1.041a3 3 0 0 0 0 5.918V9.04Zm1 5.918a3 3 0 0 0 0-5.918v5.918Z"/>
+          </svg></i>Service</a></li>
+          <li><a href="shop.html"><i class="bi bi-bag"></i>Shop</a></li>
+          <li><a href="about.html"><i class="bi bi-hospital"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hospital" viewBox="0 0 16 16">
+            <path d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5Zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9h-.5Zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Z"/>
+            <path d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1V1Zm2 14h2v-3H7v3Zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm0-14H6v1h4V1Zm2 7v7h3V8h-3Zm-8 7V8H1v7h3Z"/>
+          </svg></i>About us</a></li>
+          <li><a href="contacts.html"><i class="bi bi-person"></i>Contacts</a></li>
+          <li>
+            <div class="night-mode-nav"><i class="bi bi-moon"></i>Night Mode
+              <div class="form-check form-switch">
+                <input class="form-check-input form-check-success" id="darkSwitch" type="checkbox">
+              </div>
+            </div>
+          </li>
+          <li><a href="#"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+        </ul>
+        <!-- Social Info -->
+        <div class="social-info-wrap"><a href="#"><i class="bi bi-telegram"></i></a><a href="#"><i class="bi bi-github"></i></a><a href="#"><i class="bi bi-instagram"></i></a></div>
+        <!-- Copyright Info -->
+        <div class="copyright-info">
+          <p>2022 &copy; Made by<a href="https://t.me/bogdanchik1313">Bogdan Migunov</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Welkome Card -->
+  <div class="container mt-10">
+    <div class="card card-bg-img bg-img bg-overlay" style="background-image: url('img/bg-img/welcome-card-bg.jpg'); min-height: 475px;">
+      <div class="cs-card card-body p-5 direction-rtl" style="display: flex; flex-direction: column; align-items: end;">
+        <h2 class="text-white display-3" style="margin-bottom: 3px;">Pets First</h2>
+        <p class="text-white display-3" style="font-size: 32px;">Your favorive pet clinic</p>
+        <a class="btn btn-primary btn-creative" href="#">About Us</a>
+      </div>
+    </div>
+  </div>
+  <!-- Tiny Slider -->
+  <div class="container px-0 mt-5">
+    <div class="block-title mb-2">
+      <h1>Our services</h1>
+    </div>
+    <div class="tiny-slider-three-wrapper">
+      <div class="tiny-slider-three">
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-img bg-overlay" style="background-image: url('img/bg-img/pet-surgery.jpg')">
+            <div class="slide-content">
+              <h2 class="text-white">Surgery</h2>
+              <a class="btn btn-creative btn-primary" href="service.html">See more</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-img bg-overlay" style="background-image: url('img/bg-img/pet-oftalmology.jpg')">
+            <div class="slide-content">
+              <h2 class="text-white">Ophthalmology</h2>
+              <a class="btn btn-creative btn-primary" href="service.html">See more</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-img bg-overlay" style="background-image: url('img/bg-img/pet-dentistry.jpg')">
+            <div class="slide-content">
+              <h2 class="text-white">Dentistry</h2>
+              <a class="btn btn-creative btn-primary" href="service.html">See more</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-img bg-overlay" style="background-image: url('img/bg-img/pet-cardiology.jpg')">
+            <div class="slide-content">
+              <h2 class="text-white">Cardiology</h2>
+              <a class="btn btn-creative btn-primary" href="service.html">See more</a>
+            </div>
+          </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div>
+          <div class="single-hero-slide bg-img bg-overlay" style="background-image: url('img/bg-img/pet-tests.jpg')">
+            <div class="slide-content">
+              <h2 class="text-white">Dog and cat tests</h2>
+              <a class="btn btn-creative btn-primary" href="service.html">See more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Shop Grid -->
+  <div class="page-content-wrapper py-3 mt-5" style="margin-bottom: 0px;">
+    <div class="top-products-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="block-title mb-2">
+              <h1>Supplies for your pet</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3">
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/milk-bones.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Milk-Bone Soft & Chewy Dog Treats with 12 Vitamins and Minerals</a>
+                <!-- Product Price -->
+                <p class="sale-price">$9.89<span>$13.42</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/nutramax.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Nutramax Laboratories COSEQUIN</a>
+                <!-- Product Price -->
+                <p class="sale-price">$8.99<span>$19.99</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/ball.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Chuckit! Ultra Ball Dog Toy</a>
+                <!-- Product Price -->
+                <p class="sale-price">$10.99<span>$12</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card-->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/zesty-paws.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Zesty Paws Allergy Immune Supplement for Dogs</a>
+                <!-- Product Price -->
+                <p class="sale-price">$2.99<span>$4</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/pads.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Basics Dog and Puppy Pads</a>
+                <!-- Product Price -->
+                <p class="sale-price">$0.78<span>$1.12</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/hartz.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Hot</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Hartz Delectables Squeeze Up</a>
+                <!-- Product Price -->
+                <p class="sale-price">$31<span>$44</span></p><a class="btn btn-outline-danger btn-sm disabled" href="#">
+                  <svg class="bi bi-cart-x me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793 7.354 5.646z"></path>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                  </svg>Out of Stock</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/tooth-paste.jpg" alt=""></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Dog Toothpaste</a>
+                <!-- Product Price -->
+                <p class="sale-price">$12.99</p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                    <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+          <!-- Single Top Product Card -->
+          <div class="col-6 col-sm-4 col-lg-3">
+            <div class="card single-product-card">
+              <div class="card-body p-3">
+                <!-- Product Thumbnail --><a class="product-thumbnail d-block" href="page-shop-details.html"><img src="img/products-img/pooph.jpg" alt="">
+                <!-- Badge --><span class="badge bg-primary">Sale</span></a>
+                <!-- Product Title --><a class="product-title d-block text-truncate" href="page-shop-details.html">Pooph Pet Odor Eliminator</a>
+                <!-- Product Price -->
+                <p class="sale-price">$13.99<span>$17.99</span></p><a class="btn btn-outline-info btn-sm" href="shop-detail.html">
+                  <svg class="bi bi-cart me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>Buy now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <div class="shop-pagination pt-3">
+      <div class="container">
+        <div class="card">
+          <div class="card-body py-3">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination pagination-two justify-content-center">
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous">
+                    <svg class="bi bi-chevron-left" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                    </svg></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next">
+                    <svg class="bi bi-chevron-right" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                    </svg></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sale counter -->
+  <div class="page-content-wrapper py-3 mb-0 mt-2">
+    <div class="container">
+      <div class="card card-bg-img bg-img bg-overlay" style="background-image: url('img/bg-img/percents-background-pattern.jpg')">
+        <div class="card-body text-center p-5 color-white">
+          <h2 class="color-white">Hurry Up</h2>
+          <p class="color-white">Discounts will expire soon</p>
+          <div class="color-white countdown1" id="countdown1" data-date="22-11-2022" data-time="00:00">
+            <div class="day"><span class="num color-white"></span><span class="word"></span></div>
+            <div class="hour"><span class="num color-white"></span><span class="word"></span></div>
+            <div class="min"><span class="num color-white"></span><span class="word"></span></div>
+            <div class="sec"><span class="num color-white"></span><span class="word"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Review -->
+  <div class="container mt-3">               
+    <div class="testimonial-slide-one-wrapper">
+      <div class="testimonial-slide testimonial-style1">
+        <!-- Single Testimonial Slide -->
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div class="single-testimonial-slide">
+                <div class="image-wrapper"><img src="img/bg-img/feedback1.png" alt=""></div>
+                <div class="text-content">
+                  <p class="mb-2">I strongly recommend this clinic to everyone. Thanks!.</p><span class="d-block">- Tolly</span>
+                </div><i class="bi bi-chat-quote text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Single Testimonial Slide -->
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div class="single-testimonial-slide">
+                <div class="image-wrapper"><img src="img/bg-img/feedback2.png" alt=""></div>
+                <div class="text-content">
+                  <p class="mb-2">You've saved our lives! Thanks guys, keep up the good work! You are the best!</p><span class="d-block">- Bonny</span>
+                </div><i class="bi bi-chat-quote text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Single Testimonial Slide -->
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div class="single-testimonial-slide">
+                <div class="image-wrapper"><img src="img/bg-img/feedback3.png" alt=""></div>
+                <div class="text-content">
+                  <p class="mb-2">Absolutely wonderful! I wish I would have thought of it first.</p><span class="d-block">- Pretty</span>
+                </div><i class="bi bi-chat-quote text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact US -->
+  <div class="page-content-wrapper py-3 mt-3">
+    <div class="container">               
+      <!-- Contact Form -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="mb-3">Write to us</h5>
+          <div class="contact-form">
+            <form action="#">
+              <div class="form-group mb-3">
+                <input class="form-control" type="text" placeholder="Your name">
+              </div>
+              <div class="form-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter email">
+              </div>
+              <div class="form-group mb-3">
+                <select class="form-select" name="topic">
+                  <option value="">Pet Disease</option>
+                  <option value="">Site Works Wrong</option>
+                  <option value="">About Product Ordering</option>
+                </select>
+              </div>
+              <div class="form-group mb-3">
+                <textarea class="form-control" name="textarea" cols="30" rows="10" placeholder="Write details"></textarea>
+              </div>
+              <button class="btn btn-creative btn-primary w-100">Send Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Content -->
+  <div class="footer-nav position-relative shadow-sm footer-style-two" style="position: fixed !important; bottom: 0; left: 0; right: 0; z-index: 1000">
+    <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+      <li class="active"><a href="index.html">
+        <svg class="bi bi-house" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+          <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
+        </svg></a></li>
+      <li><a href="service.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-capsule-pill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.02 5.364a3 3 0 0 0-4.242-4.243L1.121 6.778a3 3 0 1 0 4.243 4.243l5.657-5.657Zm-6.413-.657 2.878-2.879a2 2 0 1 1 2.829 2.829L7.435 7.536 4.607 4.707ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm-.5 1.041a3 3 0 0 0 0 5.918V9.04Zm1 5.918a3 3 0 0 0 0-5.918v5.918Z"/>
+        </svg></a></li>
+      <li><a href="shop.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+        </svg></a></li>
+      <li><a href="cart.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg></a></li>
+    </ul>
+    <!-- # Footer Two Layout End -->
+  </div>
+  
+    
+
+
+  <!-- All JavaScript Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slideToggle.min.js"></script>
+  <script src="js/internet-status.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/vanilla-dataTables.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/magic-grid.min.js"></script>
+  <script src="js/dark-rtl.js"></script>
+  <script src="js/active.js"></script>
+  <!-- PWA -->
+  <script src="pwa.js"></script>
+</body>
+</html>
